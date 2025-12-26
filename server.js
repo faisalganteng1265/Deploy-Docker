@@ -100,7 +100,7 @@ const root = {
 app.use('/graphql', graphqlHTTP({
   schema: schema,
   rootValue: root,
-  graphiql: true,
+  graphiql: { headerEditorEnabled: true },
 }));
 
 app.get('/', (_req, res) => {
